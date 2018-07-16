@@ -1,9 +1,8 @@
 def coin_changer(amount)
   denoms = { :quarter => 0, :dime => 0, :nickel => 0, :penny => 0 }
-
   while amount >= 25 do
-    denoms[:quarter] += 1
-    amount -= 25
+  denoms[:quarter] += 1
+  amount -= 25
   end
 
   while amount >= 10 do
@@ -21,8 +20,21 @@ def coin_changer(amount)
     amount -= 1
   end
 
+if denoms[:quarter] == 0
+  denoms.delete(:quarter)
+end
+
+if denoms[:dime] == 0
+  denoms.delete(:dime)
+end
+
+if denoms[:nickel] == 0
+  denoms.delete(:nickel)
+end
+
+if denoms[:penny] == 0
+  denoms.delete(:penny)
+end
 
   denoms
-
-
 end
