@@ -28,24 +28,29 @@ class CoinChanger < Minitest::Test
     assert_equal({:penny => 1}, coin_changer(amount))
   end
 
-  def test_if_2_penny_equals_2
+    def test_if_2_penny_equals_2
     amount = 2
     assert_equal({:penny => 2}, coin_changer(amount))
   end
 
-  def test_if_2_coins
+  def test_if_2_coins_equal_11
     amount = 11
     assert_equal({:dime => 1, :penny => 1}, coin_changer(amount))
   end
 
-  def test_if_all_coins
+  def test_if_all_coins_93
     amount = 93
     assert_equal({:quarter => 3, :dime => 1, :nickel => 1, :penny => 3}, coin_changer(amount))
   end
 
-  def test_if_all_coins_with_blanks
+  def test_if_all_coins_with_blanks_75
     amount = 75
     assert_equal({:quarter => 3, :dime => 0, :nickel => 0, :penny => 0}, coin_changer(amount))
+  end
+
+  def test_if_60
+    amount = 60
+    assert_equal({:quarter => 2, :dime => 1, :nickel => 0, :penny => 0}, coin_changer(amount))
   end
 
 
