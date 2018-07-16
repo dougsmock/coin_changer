@@ -45,12 +45,20 @@ class CoinChanger < Minitest::Test
 
   def test_if_all_coins_with_blanks_75
     amount = 75
+<<<<<<< HEAD
     assert_equal({:quarter => 3}, coin_changer(amount))
+=======
+    assert_equal({:quarter => 3, :dime => 0, :nickel => 0, :penny => 0}, coin_changer(amount))
+>>>>>>> 982d67b1e7dd36e88220646dd00619cab489faa5
   end
 
   def test_if_60
     amount = 60
+<<<<<<< HEAD
     assert_equal({:quarter => 2, :dime => 1}, coin_changer(amount))
+=======
+    assert_equal({:quarter => 2, :dime => 1, :nickel => 0, :penny => 0}, coin_changer(amount))
+>>>>>>> 982d67b1e7dd36e88220646dd00619cab489faa5
   end
 
 
