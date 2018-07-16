@@ -1,5 +1,5 @@
 require "minitest/autorun"
-require_relative "coins.rb"
+require_relative "coins_alt.rb"
 
 class CoinChanger < Minitest::Test
 
@@ -45,12 +45,12 @@ class CoinChanger < Minitest::Test
 
   def test_if_all_coins_with_blanks_75
     amount = 75
-    assert_equal({:quarter => 3, :dime => 0, :nickel => 0, :penny => 0}, coin_changer(amount))
+    assert_equal({:quarter => 3}, coin_changer(amount))
   end
 
   def test_if_60
     amount = 60
-    assert_equal({:quarter => 2, :dime => 1, :nickel => 0, :penny => 0}, coin_changer(amount))
+    assert_equal({:quarter => 2, :dime => 1}, coin_changer(amount))
   end
 
 
